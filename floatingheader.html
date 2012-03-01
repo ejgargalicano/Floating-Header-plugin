@@ -1,0 +1,71 @@
+<DOCTYPE html>
+
+<html>
+<head>
+    <title>Floating Header</title>
+    <meta name="author" content="Erwin Jove Gargalicano" />
+	<link media='screen' type='text/css' rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="modernizr.min.js"></script>
+    
+    <script type="text/javascript">
+       $(document).ready(function(){
+            var floatLogo = $('#logo a');
+            var floatNav = $('#top-navigation');
+            
+            //Floated Header
+            $("<div id='floated-header'>\
+                <div class='container-inner'>\
+                <div id='floated-logo'>"+floatLogo.html()+"</div>\
+                    <ul id='floated-top-navigation'>"+floatNav.html()+"<li>\
+                        <a id='float-top' href='#'>TOP &raquo;</a></li></ul>\
+            </div></div>").appendTo("body");
+
+            
+            if($(window).scrollTop() < 50){
+                $('#floated-header').hide();
+            }
+            
+            $(window).scroll(function(){
+                if($(window).scrollTop() < 50){
+                    $('#floated-header').fadeOut();
+                }else{
+                    $('#floated-header').fadeIn();
+                }
+            });
+            
+            $('#float-top').click(function(){
+                $('html, body').animate({scrollTop:0}, 300);
+            });
+       });
+    </script>
+</head>
+
+<body>
+    <div id="page-container">
+        <header id="page-header">
+            <div class="container-inner">
+                <div class="container-aligner">
+                    <h1 id="logo"><a href="#">LOGO</a></h1>
+                    <nav id="top-navigation-wrapper">
+                        <ul id="top-navigation">
+                            <li><a href="#">MENU 1</a></li>
+                            <li><a href="#">MENU 2</a></li>
+                            <li><a href="#">MENU 3</a></li>
+                            <li><a href="#">MENU 4</a></li>
+                            <li><a href="#">MENU 5</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <section id="page-body">
+            <div class="container-inner">
+                <div class="container-aligner">
+                    <section id="page-body-content"></section>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

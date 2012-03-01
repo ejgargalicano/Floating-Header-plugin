@@ -1,0 +1,49 @@
+*{margin: 0; padding: 0;}
+    
+        body{font-family: Arial}
+    
+        #page-container{margin: 0 auto; width: 940px;}
+        
+        #page-header{padding-top: 20px;}
+        
+        #top-navigation-wrapper{float: right}
+        
+        #logo{float: left; width: 200px;}
+        
+        #logo a{color: #333; text-decoration: none;}
+        
+        #top-navigation li{background-color: #CCC; float: left; margin-right: 10px; list-style: none; padding: 7px 10px;}
+        
+        #top-navigation li a{color: #333; font-weight: bold; text-decoration: none}
+        
+        #page-body-content{min-height: 1000px;}
+        
+        /* Floated header */
+        #floated-header{height: 40px;position: fixed;top: 0;width: 100%; background: none repeat scroll 0 0 rgba(207, 219, 236, 0.8)}
+        #floated-header .container-inner{margin: 0 auto;padding-bottom: 10px;padding-top: 10px;width: 940px;}
+        #floated-logo{float: left; width: 200px; color: #000; font-weight: bold}
+        #floated-top-navigation{float: right;}
+        #floated-top-navigation li{float: left; margin-right: 20px; list-style: none}
+        #floated-top-navigation li a{text-decoration: none; font-size: 11px; color: #000}
+        #float-top{font-size: 9px !important;}
+        
+        .clearfix:after {
+            content: ".";
+            display: block;
+            clear: both;
+            visibility: hidden;
+            line-height: 0;
+            height: 0;
+        }
+         
+        .clearfix {
+            display: inline-block;
+        }
+         
+        html[xmlns] .clearfix {
+            display: block;
+        }
+         
+        * html .clearfix {
+            height: 1%;
+        }
